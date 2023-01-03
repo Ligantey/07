@@ -11,7 +11,8 @@
 }
 
 .property__list {
-  @extend %flex-align-justify;
+  @extend %flex-justify;
+  align-items: baseline;
 }
 
 .property__items:not(:last-child) {
@@ -29,7 +30,7 @@
   background-position: center;
 
   margin-bottom: 30px;
-  
+
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
