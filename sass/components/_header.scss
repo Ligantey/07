@@ -1,0 +1,144 @@
+/* HEADER */
+
+header {
+  margin: auto;
+
+  background-color: var(--pramyre-text-color);
+  border-bottom: 1px solid #ececec;
+}
+
+.navigation {
+  @extend %flex-align-justify;
+
+  text-align: center;
+}
+
+/* --- LOGO --- */
+
+.logo {
+  @extend %flex-align-justify;
+  cursor: pointer;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  @include font(700, 26px, 1.19, 0.03em);
+  color: var(--caption-color);
+}
+
+.navigation__logo {
+  margin-top: 24px;
+  margin-bottom: 25px;
+  margin-right: 91px;
+}
+
+.logo__web {
+  color: var(--hover-color);
+}
+
+/* --- site-nav --- */
+
+.site-nav {
+  @extend %flex-align;
+}
+
+.site-nav a {
+  color: var(--accent-color);
+}
+
+.site-nav > li {
+  cursor: pointer;
+}
+
+.site-nav > li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.link {
+  transition: transform var(--animate), color var(--animate);
+}
+
+.link:hover,
+.link:focus,
+.link.current {
+  color: var(--hover-color);
+  border-radius: 2px;
+}
+
+.site-nav__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 48px;
+
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 28px;
+
+  bottom: 0;
+  left: 0;
+  background: var(--hover-color);
+  border-radius: 2px;
+}
+
+.current:hover::after {
+  opacity: 1;
+  transition: transform var(--animate);
+}
+
+/* --- AUTH-NAV --- */
+
+.auth-nav {
+  @extend %flex-justify;
+  margin-left: auto;
+  align-items: baseline;
+}
+
+.auth-nav > li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.auth-nav__item {
+  @extend %flex-justify;
+  align-items: baseline;
+
+  color: var(--title-text-color);
+  @include font(500, 14px, 1.14, 0.02em);
+}
+
+.auth-nav__envelope {
+  margin-right: 10px;
+}
+
+.auth-nav__mail {
+  color: var(--title-text-color);
+  transition: color var(--animate);
+}
+
+.auth-nav__mail:hover,
+.auth-nav__mail:focus {
+  fill: var(--hover-color);
+  color: var(--hover-color);
+}
+
+.auth-nav__phone {
+  color: var(--title-text-color);
+  transition: color var(--animate);
+}
+
+.auth-nav__phone:hover,
+.auth-nav__phone:focus {
+  fill: var(--hover-color);
+}
+
+.auth-nav__smartphone {
+  margin-right: 10px;
+}

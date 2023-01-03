@@ -1,0 +1,51 @@
+.property {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  flex-wrap: wrap;
+}
+
+.property__container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.property__list {
+  @extend %flex-align-justify;
+}
+
+.property__items:not(:last-child) {
+  margin-right: 30px;
+}
+
+.property__items {
+  min-height: 224px;
+}
+
+.property__icon {
+  @extend %flex-align-justify;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-bottom: 30px;
+  
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  
+  border-radius: 4px;
+  background: #f5f4fa;
+}
+
+.property__subtitle {
+  margin-bottom: 10px;
+
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.property__text {
+  @include font(null, 14px, 1.71, 0.03em);
+}
